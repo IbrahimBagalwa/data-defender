@@ -36,24 +36,24 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      heading: 'How can I',
+      subheading: 'protect my data in Rwanda?',
+      message: 'How can I protect my data in Rwanda?'
     },
     {
-      heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      heading: 'What is the',
+      subheading: 'Personal Data Protection Law in Rwanda?',
+      message: 'What is the Personal Data Protection Law in Rwanda?'
     },
     {
-      heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      heading: 'I would like to know',
+      subheading: 'how to secure my online accounts',
+      message: 'I would like to know how to secure my online accounts'
     },
     {
       heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      subheading: 'common data protection threats in Rwanda?',
+      message: 'What are some common data protection threats in Rwanda?'
     }
   ]
 
@@ -65,7 +65,7 @@ export function ChatPanel({
       />
 
       <div className="mx-auto sm:max-w-2xl sm:px-4">
-        <div className="mb-4 grid grid-cols-2 gap-2 px-4 sm:px-0">
+        <div className="mb-20 grid grid-cols-2 gap-2 px-4 sm:px-0">
           {messages.length === 0 &&
             exampleMessages.map((example, index) => (
               <div
@@ -128,11 +128,7 @@ export function ChatPanel({
             </div>
           </div>
         ) : null}
-
-        <div className="space-y-4 border-t bg-background px-4 py-2 shadow-lg sm:rounded-t-xl sm:border md:py-4">
-          <PromptForm input={input} setInput={setInput} />
-          <FooterText className="hidden sm:block" />
-        </div>
+        <PromptForm input={input} setInput={setInput} />
       </div>
     </div>
   )
